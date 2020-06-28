@@ -4,7 +4,7 @@ boto3==1.14.12
 botocore==1.17.12
 class-registry==2.1.2
 distlib==0.3.0
-Django==3.0.5
+Django==3.0.7
 django-filters==0.2.1
 docutils==0.15.2
 Faker==4.0.3
