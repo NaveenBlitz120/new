@@ -1,0 +1,22 @@
+body
+{
+
+    color:#0a0a0a;
+    text-align:center;
+    font-family: 'Dancing Script', cursive;
+    background-color: #f1faee;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    padding-top: 0;
+}
+.mynavbar
+{
+  background-color: #00a896;
+
+}
+
+#mynav
+{
+    transition: 0.5s;
+
+}

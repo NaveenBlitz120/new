@@ -1,0 +1,72 @@
+{%  extends 'stock/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+	<div class="col-md-6">
+        
+        <div class="card card-body">
+			<form class ="sub-form" action="" method="POST">
+                {% csrf_token %}
+				
+                    <div class="form_items">
+                        <p>
+                            <span class="label"> 
+                                {{form.medicine_name.label}}
+                                {{form.medicine_name}}
+                            </span>
+                        </p>
+                        
+                        <p>
+                            <span class="label">
+                                {{form.company_name.label}}
+                                {{form.company_name}}
+                            </span>    
+                        </p>
+                        
+                        <p>
+                            <span class="label">
+                                {{form.medicine_type.label}}
+                                {{form.medicine_type}}
+                            </span>
+                        </p>
+
+                        
+                        <p>
+                            <span class="label">
+                                {{form.medicine_open_stock.label}}
+                                {{form.medicine_open_stock}}
+                            </span>    
+                        </p>
+                        
+                        <p>
+                            <span class="label">
+                                {{form.medicine_stock_available.label}}
+                                {{form.medicine_stock_available}}
+                            </span>    
+                        </p>
+
+                        <p>
+                            <span class="label">
+                                {{form.medicine_stock_type.label}}
+                                {{form.medicine_stock_type}}
+                            </span>    
+                        </p>
+
+                        <p>
+                            <span class="label">
+                                {{form.medicine_mrp.label}}
+                                {{form.medicine_mrp}}
+                            </span>
+                        </p>
+                        
+                    </div>
+                                    
+				<input type="submit" name="Submit">
+			</form>
+	    </div>
+	</div>
+</div>
+<script src="{% static "js/form.js" %}"></script>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>search page</title>
+    <link rel="stylesheet" href="{% static "css/search.css"%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    {% include 'stock/navbar.html' %}
+    <div class="wrap">
+           <div class="search">
+             <form method="get">
+    				{{filter.form}}
+            <!--<button type="submit" class="searchButton">
+              <i class="fa fa-search icon"></i>
+            </button>-->
+            <button class="btn btn-sm btn-danger" type="submit">Search</button>
+    		  </form>
+            <!-- <form class="" action="index.html" method="get">
+               {{filter.form}}-->
+
+              <!--<input type="text" class="searchTerm" placeholder="What are you looking for?">-->
+              <!--
+           </form>-->
+           </div>
+        </div>
+        
+    <!--<div class="wrap">
+       <div class="search">
+         <form class="" action="index.html" method="get">
+         </form>
+          <input type="text" class="searchTerm" placeholder="What are you looking for?">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search icon"></i>
+         </button>
+       </div>
+    </div>-->
+    <div class="tableallign">
+      <table class="table table-striped table-bordered table-hover tablewrap">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Medicine</th>
+            <th scope="col">company</th>
+
+            <th scope="col">Opening-stock</th>
+            <th scope="col">available-stock</th>
+            <th scope="col">weight/litres</th>
+            <th scope="col">update</th>
+            <th scope="col">delete</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        {% for obj in medi %}
+					<tr>
+						<td>{{obj.medicine_name}}</td>
+                        <td>{{obj.company_name}}</td>
+                        <td>{{obj.medicine_open_stock}}</td>
+                        <td>{{obj.medicine_stock_available}}</td>
+                        <td>{{obj.medicine_stock_type}}</td>
+
+                        <td><a class="btn btn-sm btn-info" href="{% url 'update' obj.id %}">Update</a></td>
+
+                        <td><a class="btn btn-sm btn-danger" href="{% url 'delete' obj.id %}">Delete</a></td>
+
+
+
+					</tr>
+         {% endfor %}
+      </table>
+    </div>
+  </body>
+  <script src="{%static "js/search.js"%}" charset="utf-8"></script>
+</html>
