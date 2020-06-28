@@ -23,9 +23,9 @@ TEMPLATE_DIRS=[os.path.join(BASE_DIR,'templates')]
 SECRET_KEY = '^27tq10@)5l14s4&8hv#y&^^3y(9+y&_*fh^1-=34(5!e2(nd)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['summa123.herokuapp.com','127.0.0.1']
 
 
 # Application definition
