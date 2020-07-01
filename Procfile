@@ -1,1 +1,1 @@
-git web: gunicorn offpro.wsgi --log-file -
+web: gunicorn offpro.wsgi --log-file -
