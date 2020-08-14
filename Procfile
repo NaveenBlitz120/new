@@ -1,1 +1,1 @@
-t web: gunicorn offpro.wsgi --log-file -
+git web: gunicorn offpro.wsgi --log-file -
