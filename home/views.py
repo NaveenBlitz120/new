@@ -7,3 +7,6 @@ from django.contrib.auth.decorators import login_required
 
 def homefun(request):
     return render(request,"home/loginpage.html")
+
+def map(request):
+    return render(request , "home/sample.html")
